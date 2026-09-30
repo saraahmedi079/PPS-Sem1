@@ -1,18 +1,18 @@
 #include<stdio.h>
 int main()
 {
-int n,i,rem,arm,temp;
+int n,rem,arm,temp;
 arm=0;
 printf("Enter Number:");
 scanf("%d",&n);
 temp=n;
-while(n!=0)
+while(temp!=0)
 {
-                rem=n%10;
-                arm=arm*10+rem*rem*rem;
-                n=n/10;
+     rem=temp % 10;
+    arm=arm+(rem*rem*rem);
+    temp=temp/10;
 }
-if(arm==temp)
+if(arm==n)
 printf("Given number is Armstrong");
 else
 printf("Given number is Not Armstrong");
